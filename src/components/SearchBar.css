@@ -1,0 +1,13 @@
+.search-bar {
+    margin-top: 15px !important;
+    padding: 1em 0em !important;
+}
+
+.field img {
+    max-width: 100px;
+}
+
+.header-size {
+    font-size: 1.28571429rem;
+    padding-left: 20px;
+}
