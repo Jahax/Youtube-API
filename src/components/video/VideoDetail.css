@@ -6,3 +6,7 @@
 .ui .header {
     color: #ffffff;
 }
+
+.disabled {
+    color: #cecece;
+}
