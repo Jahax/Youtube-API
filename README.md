@@ -5,4 +5,4 @@ This repo is a demonstration of how to build a React / Redux Application.
 
 [Youtuber-API](https://youtuber-api.herokuapp.com/).
 
-
+<img src="https://i.imgur.com/UADBA6K.jpg">
