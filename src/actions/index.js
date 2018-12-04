@@ -1,4 +1,4 @@
-import { SIGN_IN, SIGN_OUT, FETCH_VIDEOS, FETCH_COMMENTS, PASS_SELECTED } from './types';
+import { SIGN_IN, SIGN_OUT, FETCH_VIDEOS, FETCH_COMMENTS, POST_COMMENT, PASS_SELECTED } from './types';
 import youtube from '../apis/youtube';
 
 // Signin to Google Auth
@@ -50,16 +50,7 @@ export const passSelectedVideo = (video) => async dispatch => {
 };
 
 // Insert Comment to Youtube Video
-export const insertComments = (term) => async dispatch => {      
-    const response = await youtube.post('/commentThreads', {
-        params: {
-            part: 'snippet',
-            properties: { 
-                'snippet.channelId': '',
-                'snippet.videoId': '',
-                'snippet.topLevelComment.snippet.textOriginal': ''
-        },
-      }
-    });
-
+export const postComment = (comment, videoId) => async dispatch => {  
+    const response = await youtube.post('/commentThreads?part=snippet');
+    dispatch({ type: POST_COMMENT, payload: response.data });
 };
